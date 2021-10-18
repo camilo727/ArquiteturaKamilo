@@ -1,0 +1,46 @@
+body {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.navbar {
+    border-bottom: #c0392b;
+    opacity: .7;
+}
+
+#inicio-section {
+    background: url("../imagenes/modelos.jpg") no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home-inner {
+    padding: 100px;
+}
+
+.dark-overlay {
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:992px) {
+    .home-inner {
+        padding-top: 100%;
+    }
+}
+
+
+  footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color:#348E0A;
+    text-align: center;
+  }
+
+
