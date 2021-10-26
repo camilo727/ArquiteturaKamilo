@@ -11,6 +11,7 @@ class pedidoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    /*en esta funcion me ejecuta la vista */
     public function index()
     {
         return view('cliente.home.pedidos'); 
