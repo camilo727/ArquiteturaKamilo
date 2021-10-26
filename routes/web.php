@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('home','App\Http\Controllers\homeController');
+Route::resource('/','App\Http\Controllers\homeController');
 Route::resource('niña','App\Http\Controllers\chicaController');
 Route::resource('mujer','App\Http\Controllers\mujerController');
 Route::resource('pedidos','App\Http\Controllers\pedidoController');
