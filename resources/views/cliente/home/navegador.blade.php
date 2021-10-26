@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="http://3.128.26.50:81/home" class="nav-link">INICIO</a>
+                        <a href="http://3.128.26.50:81" class="nav-link">INICIO</a>
                     </li>
                     <li class="nav-item">
                         <a href="http://3.128.26.50:81/mujer" class="nav-link">MUJER</a>

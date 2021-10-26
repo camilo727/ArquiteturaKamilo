@@ -17,12 +17,12 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <a href="http://127.0.0.1:8000/mujer">
+                                            <a href="http://3.128.26.50:81/mujer">
                                                 <div class="col-2"><img src="{{asset('/imagenes/mujer.png')}}" alt="" sizes="" srcset=""></div>
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="http://127.0.0.1:8000/ni%C3%B1a">
+                                            <a href="http://3.128.26.50:81/ni%C3%B1a">
                                                 <div class="col-2"><img src="{{asset('/imagenes/modelo_niña.jpg')}}" alt="" sizes="" srcset=""></div>
                                             </a>
                                         </td>
