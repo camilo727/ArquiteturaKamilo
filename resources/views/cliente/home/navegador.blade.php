@@ -30,19 +30,19 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="http://127.0.0.1:8000/home" class="nav-link">INICIO</a>
+                        <a href="http://3.128.26.50:81/home" class="nav-link">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a href="http://127.0.0.1:8000/mujer" class="nav-link">MUJER</a>
+                        <a href="http://3.128.26.50:81/mujer" class="nav-link">MUJER</a>
                     </li>
                     <li class="nav-item">
-                        <a href="http://127.0.0.1:8000/ni%C3%B1a" class="nav-link">NIÑA</a>
+                        <a href="http://3.128.26.50:81/ni%C3%B1a" class="nav-link">NIÑA</a>
                     </li>
                     <li class="nav-item">
                         <a href="" class="nav-link">INGRESO</a>
                     </li>
                     <li class="nav-item">
-                        <a href="http://127.0.0.1:8000/pedidos" class="nav-link">MI PEDIDO</a>
+                        <a href="http://3.128.26.50:81/pedidos" class="nav-link">MI PEDIDO</a>
                     </li>
                 </ul>
             </div>
