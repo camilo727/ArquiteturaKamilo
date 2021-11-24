@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\inventario;
+use App\producto;
 use Illuminate\Http\Request;
 
 class envioController extends Controller
@@ -11,10 +13,16 @@ class envioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    /*en esta funcion me ejecuta la vista */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        return view('cliente.home.envio'); 
+        //
+
+        return view('cliente.envio',compact('inventario'));
     }
 
     /**
@@ -33,29 +41,31 @@ class envioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
-    {
-       
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\empleados  $empleados
-     * @return \Illuminate\Http\Response
-     */
-    public function show()
+    public function store(Request $request)
     {
         //
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Display the specified resource.
      *
-     * @param  \App\Models\empleados  $empleados
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function show($id)
+    {
+        //
+        $inventario = inventario::where('producto_id',$id)->first();
+        return view('cliente.envio', compact('inventario'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
     {
         //
     }
@@ -64,22 +74,22 @@ class envioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\empleados  $empleados
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update()
+    public function update(Request $request, $id)
     {
-      
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\empleados  $empleados
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy($id)
     {
-       
+        //
     }
 }

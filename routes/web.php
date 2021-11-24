@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,35 +10,29 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/* es esta la ruta que me redireciona al controlador de home y es la primera
-que se egecuta por defecto  */
-// Route::resource('/','App\Http\Controllers\homeController');
-/* esta ruta me redirecionaal comntrolador de niñas */
-// Route::resource('niña','App\Http\Controllers\chicaController');
-/* esta ruta me redirecionaal comntrolador de mujer */
-// Route::resource('mujer','App\Http\Controllers\mujerController');
-/* esta ruta me redirecionaal comntrolador de pedido */
-// Route::resource('pedidos','App\Http\Controllers\pedidoController');
-/* esta ruta me redirecionaal comntrolador de envio */
-// Route::resource('envio','App\Http\Controllers\envioController');
-/* esta ruta me redirecionaal comntrolador de compra */
-// Route::resource('compra','App\Http\Controllers\compraController');
-Route::get('/', function () {
-     return view('cliente/home/home');
- });
- 
- Route::get('/niña', function () {
-     return view('cliente/home/niña');
- });
- Route::get('/mujer', function () {
-     return view('cliente/home/mujer');
- });
- Route::get('/pedidos', function () {
-     return view('cliente/home/pedidos');
- });
- Route::get('/envio', function () {
-     return view('cliente/home/envio');
- });
- Route::get('/compra', function () {
-     return view('cliente/home/compra');
- });
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('', 'principalController@index')->name('principal');
+Route::get('registro', 'registroController@index')->name('principal_create');
+
+Route::post('registro', 'registroController@store')->name('registro_store');
+
+Route::get('mujer', 'mujerController@index')->name('mujer');
+
+Route::get('niña', 'niñaController@index')->name('niña');
+Route::get('envio', 'envioController@index')->name('envio');
+
+Route::get('pedido', 'pedidoController@index')->name('pedido');
+
+
+Route::resource('usuario', 'clienteController');
+
+Route::resource('producto', 'productoController');
+
+Route::resource('inventario', 'inventarioctoController');
+
+Route::resource('venta', 'ventactoController');
+
+Route::resource('envios_admin', 'envio_admiController');

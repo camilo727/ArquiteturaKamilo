@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\ventas_has_producto;
 class pedidoController extends Controller
 {
     /**
@@ -11,10 +11,11 @@ class pedidoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    /*en esta funcion me ejecuta la vista */
     public function index()
     {
-        return view('cliente.home.pedidos'); 
+        //
+        $pedido=ventas_has_producto::all();
+        return view('cliente.pedido',compact('pedido'));
     }
 
     /**
@@ -33,18 +34,18 @@ class pedidoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-       
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\empleados  $empleados
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
         //
     }
@@ -52,10 +53,10 @@ class pedidoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\empleados  $empleados
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
         //
     }
@@ -64,22 +65,22 @@ class pedidoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\empleados  $empleados
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update()
+    public function update(Request $request, $id)
     {
-      
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\empleados  $empleados
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy($id)
     {
-       
+        //
     }
 }
